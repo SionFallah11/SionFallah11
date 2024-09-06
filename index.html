@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="trapz.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app" />
+    <title>Trapezoid Inc</title>
+    <style>
+      body {
+        background-image: url("trapzo.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .topnav {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        );
+      }
+      .topnav img {
+        height: 40px;
+        margin-right: 15px;
+      }
+
+      .topnav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: inline-block;
+      }
+
+      .topnav a.active {
+        background-color: #4caf50;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <img src="trapzo.jpg" alt="Your Logo" />
+      <a class="active" href="#home">Home</a>
+      <a href="#work-log-section">Work Log</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+      <!-- Main content goes here -->
+      <h1>Welcome to Trapezoid Inc!</h1>
+      <p>
+        Trapezoid Inc is a dynamic software development company specializing in
+        creating innovative digital solutions. We are currently focused on
+        developing a cutting-edge social media website designed to connect
+        people in new and meaningful ways. Our goal is to provide a platform
+        that fosters genuine interaction, promotes community engagement, and
+        enhances user experience by leveraging the latest in technology and
+        user-centered design. At Trapezoid Inc, we are committed to building
+        software that not only meets the needs of today but also anticipates the
+        trends of tomorrow. We strive to empower individuals and businesses by
+        delivering reliable, scalable, and impactful digital solutions.
+      </p>
+
+      <p>Scroll down to see more about us!<br /><br /></p>
+
+      <!-- Work Log Section -->
+      <h1 id="work-log-section">Work Log</h1>
+      <div class="worklog-form">
+        <label for="date">Date (MM/DD/YYYY):</label>
+        <input type="datetime-local" id="date" required />
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" required />
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <button onclick="addWorkLog()">Add Entry</button>
+      </div>
+      <table class="worklog-table" id="worklogTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <h1 id="abt-section">About</h1>
+      <p><b>Who we are:</b> <br>Sion Fallah - Hello, I am the CEO of our company and I am a 4th year computer science student on my last year here.</p>
+    </div>
+
+    <script src="worklog.js"></script>
+  </body>
+</html>
